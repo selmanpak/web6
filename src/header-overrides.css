@@ -1,0 +1,37 @@
+/* Header overrides copied from the uploaded static website header. */
+.logo{display:flex;align-items:center}
+.fdlogo{height:25px;width:auto;display:block;transition:.3s}
+footer .fdlogo{height:30px}
+header.scrolled .fdlogo{height:23px}
+
+.btn .circ svg{width:15px;height:15px}
+.btn-primary:hover .circ{transform:rotate(-45deg)}
+
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:20px 0;transition:.4s var(--ease);
+  border-bottom:1px solid transparent;
+}
+header.scrolled{
+  background:rgba(5,8,7,.82);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line-soft);padding:13px 0;
+}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.nav-links{display:flex;align-items:center;gap:38px;list-style:none}
+.nav-links a{font-size:14px;font-weight:500;color:var(--muted);transition:.25s;position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--green);transition:.3s var(--ease)}
+.nav-links a:hover{color:#fff}
+.nav-links a:hover::after{width:100%}
+.nav-links a.active{color:var(--muted)}
+.nav-links a.active::after{width:0}
+.nav-links a.active:hover{color:#fff}
+.nav-links a.active:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:18px}
+.menu-btn{display:none;background:none;border:none;color:#fff;cursor:pointer;flex-direction:column;gap:5px}
+.menu-btn span{width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s}
+
+@media(max-width:680px){
+  .nav-links,.nav-cta .btn{display:none}
+  .menu-btn{display:flex}
+  .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(5,8,7,.97);backdrop-filter:blur(14px);padding:24px 28px;gap:22px;border-bottom:1px solid var(--line-soft)}
+}
