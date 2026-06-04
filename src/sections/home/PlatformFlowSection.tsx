@@ -1,0 +1,4 @@
+export default function PlatformFlowSection() {
+  const steps = ['Asset onboarding', 'Data enrichment', 'AI valuation', 'Token structure', 'Investor access', 'Lifecycle reporting'];
+  return <section className="section" id="platform"><div className="wrap"><span className="eyebrow reveal">Platform flow</span><h2 className="reveal">From asset intake to <span className="green">digital ownership</span></h2><p className="lead reveal d1">A modular lifecycle designed to make future page edits simple while keeping the delivered visual language intact.</p><div className="flow"><div className="flow-line"></div><div className="flow-steps">{steps.map((step, i) => <div className="fstep reveal" key={step}><div className="num">{i + 1}</div><h4>{step}</h4><p>Structured, auditable and ready for regulated workflows.</p></div>)}</div></div></div></section>;
+}

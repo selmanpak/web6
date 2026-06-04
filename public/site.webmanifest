@@ -1,0 +1,9 @@
+{
+  "name": "FirstData",
+  "short_name": "FirstData",
+  "start_url": "/web6/",
+  "display": "standalone",
+  "background_color": "#050807",
+  "theme_color": "#050807",
+  "icons": []
+}
